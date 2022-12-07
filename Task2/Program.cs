@@ -34,8 +34,9 @@ try
     Console.WriteLine($"Сгенерирован массив из {size} элементов:");
     PrintArray(array);
     Console.WriteLine($"Измененный массив:");
-    ChangeArray(array);
-    PrintArray(array);
+    // ChangeArray(array);
+    // PrintArray(array);
+    PrintArray(ChangeArray(array));
 }
 
 catch
