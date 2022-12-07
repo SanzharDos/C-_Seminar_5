@@ -32,6 +32,20 @@ void Check(int[] size, int find)
     else Console.WriteLine($"В массиве числа {find} нет");
 }
 
+bool Check1(int[] size, int find) // функция bool - выводит либо True, либо False
+{
+    bool result = false; // говорим, что изначально у нас False
+    for (int i = 0; i < size.Length; i++)
+    {
+        if (size[i] == find) // делаем проверку, если соотвествует запросу, то True
+        {
+            result = true;
+            break; // выходим из цикла
+        }
+    }
+    return result;
+}
+
 try
 {
     Console.WriteLine("Введите размерность массива");
@@ -42,6 +56,8 @@ try
     Console.WriteLine($"Сгенерирован массив из {size} элементов:");
     PrintArray(array);
     Check(array, find);
+    if (Check1(array, find)) Console.WriteLine($"В массиве число {find} есть");
+    else Console.WriteLine($"В массиве числа {find} нет");
 }
 
 catch
