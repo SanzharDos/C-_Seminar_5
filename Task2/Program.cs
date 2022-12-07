@@ -9,10 +9,11 @@ int[] CreateArray(int size)
     return array;
 }
 
-void ChangeArray(int[] array)
+int[] ChangeArray(int[] array) // void ChangeArrat(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
         array[i] *= -1;
+        return array; // return array убрать
 }
 
 void PrintArray(int[] size)
